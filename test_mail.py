@@ -21,7 +21,7 @@ html = '''
 </html>
 '''
 
-print(mail.html_sanitize(html, strip_style=True))
+mail.html_sanitize(html, strip_style=True)
 #
 #
 #         <p>
@@ -34,10 +34,10 @@ print(mail.html_sanitize(html, strip_style=True))
 
 text = 'Here Maris writes another template for Laimonas with a link to https://icode.by/'
 
-print(mail.plaintext2html(text))
+mail.plaintext2html(text)
 # <p>Here Maris writes another template for Laimonas with a link to <a href="https://icode.by/" target="_blank">https://icode.by/</a></p>
 
-print(mail.html2plaintext(html))
+mail.html2plaintext(html)
 # Тут Марис пишет очередной шаблон письма для Лаймонаса
 # ICode.by [1]
 # Message sent from alexolikov@gmail.com

@@ -15,30 +15,6 @@ date_utils.get_quarter_number(today)
 date_utils.get_fiscal_year(today)
 # (datetime.datetime(2019, 1, 1, 0, 0), datetime.datetime(2019, 12, 31, 0, 0))
 
-
-date_utils.add(today, days=5)
-# 2019-04-03 01:53:48
-date_utils.add(today, weeks=2)
-# 2019-04-12 01:53:48
-date_utils.add(today, months=1)
-# 2019-04-29 01:53:48
-date_utils.add(today, years=1)
-# 2020-03-29 01:53:48
-date_utils.add(today, days=2, months=6, years=1)
-# 2020-10-01 01:53:48
-
-
-date_utils.subtract(today, days=5)
-# 2019-03-24 01:53:48
-date_utils.subtract(today, weeks=2)
-# 2019-03-15 01:53:48
-date_utils.subtract(today, months=1)
-# 2019-02-28 01:53:48
-date_utils.subtract(today, years=1)
-# 2018-03-29 01:53:48
-date_utils.subtract(today, days=2, months=6, years=1)
-# 2017-09-27 01:53:48
-
 date_utils.start_of(today, 'hour')
 # 2019-03-29 01:00:00
 date_utils.start_of(today, 'day')
@@ -83,6 +59,30 @@ for date in date_utils.date_range(start=today, end=date_utils.add(today, days=15
 # 2019-04-11 01:53:48
 # 2019-04-12 01:53:48
 # 2019-04-13 01:53:48
+
+
+date_utils.add(today, days=5)
+# 2019-04-03 01:53:48
+date_utils.add(today, weeks=2)
+# 2019-04-12 01:53:48
+date_utils.add(today, months=1)
+# 2019-04-29 01:53:48
+date_utils.add(today, years=1)
+# 2020-03-29 01:53:48
+date_utils.add(today, days=2, months=6, years=1)
+# 2020-10-01 01:53:48
+
+
+date_utils.subtract(today, days=5)
+# 2019-03-24 01:53:48
+date_utils.subtract(today, weeks=2)
+# 2019-03-15 01:53:48
+date_utils.subtract(today, months=1)
+# 2019-02-28 01:53:48
+date_utils.subtract(today, years=1)
+# 2018-03-29 01:53:48
+date_utils.subtract(today, days=2, months=6, years=1)
+# 2017-09-27 01:53:48
 
 
 '''
