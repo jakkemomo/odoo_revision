@@ -1,10 +1,10 @@
 from odoo.tools import misc
 
-misc.DEFAULT_SERVER_DATE_FORMAT
+date_format = misc.DEFAULT_SERVER_DATE_FORMAT
 # '%Y-%m-%d'
-misc.DEFAULT_SERVER_TIME_FORMAT
+time_format = misc.DEFAULT_SERVER_TIME_FORMAT
 # '%H:%M:%S'
-misc.DEFAULT_SERVER_DATETIME_FORMAT
+dt_format = misc.DEFAULT_SERVER_DATETIME_FORMAT
 # '%Y-%m-%d %H:%M:%S'
 
 flat_list = misc.flatten([[['a', 'b'], 'c'], 'd', [], ['e', [], 'f']])
@@ -50,11 +50,11 @@ for split in misc.split_every(iterable=['a', 'b', 'c', 'd'], n=2):
     # ('c', 'd')
 
 misc.groupby([{'first_name': 'Maris', 'last_name': 'Riediger'},
-                    {'first_name': 'Katya', 'last_name': 'Nikitko'},
-                    {'first_name': 'Zhenya', 'last_name': '1'},
-                    {'first_name': 'Zhenya', 'last_name': '2'},
-                    {'first_name': 'Zhenya', 'last_name': '3'}],
-                   key=lambda emp: emp['first_name'])
+              {'first_name': 'Katya', 'last_name': 'Nikitko'},
+              {'first_name': 'Zhenya', 'last_name': '1'},
+              {'first_name': 'Zhenya', 'last_name': '2'},
+              {'first_name': 'Zhenya', 'last_name': '3'}],
+             key=lambda emp: emp['first_name'])
 # dict_items([
 # ('Maris', [{'first_name': 'Maris', 'last_name': 'Riediger'}]),
 # ('Katya', [{'first_name': 'Katya', 'last_name': 'Nikitko'}]),

@@ -39,11 +39,11 @@ float_utils.float_is_zero(0.04252, precision_digits=5)
 float_utils.float_is_zero(0.04252, precision_digits=1)
 # True
 
-print(float_utils.float_compare(0.042555, 0.04256, precision_digits=5))
+float_utils.float_compare(0.042555, 0.04256, precision_digits=5)
 # 0 => Равны
 
-print(float_utils.float_compare(0.042555, 0.04256, precision_digits=6))
+float_utils.float_compare(0.042555, 0.04256, precision_digits=6)
 # -1 => Первое меньше второго
 
-print(float_utils.float_compare(0.04256, 0.042555, precision_digits=6))
+float_utils.float_compare(0.04256, 0.042555, precision_digits=6)
 # 1 => Первое больше второго
