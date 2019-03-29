@@ -1,10 +1,10 @@
-from dateutil.relativedelta import relativedelta as rd
+from dateutil.relativedelta import relativedelta
 from odoo.tools import date_utils
 from odoo.fields import Datetime
 
 today = Datetime.today()
 # today = datetime.strptime('2019-03-29 01:53:48', misc.DEFAULT_SERVER_DATETIME_FORMAT)
-# 2019-03-29 01:53:48
+# Представим, что сейчас 2019-03-29 01:53:48
 
 date_utils.get_month(today)
 # (datetime.datetime(2019, 3, 1, 0, 0), datetime.datetime(2019, 3, 31, 0, 0))
@@ -41,7 +41,7 @@ date_utils.end_of(today, 'quarter')
 date_utils.end_of(today, 'year')
 # 2019-12-31 23:59:59.999999
 
-for date in date_utils.date_range(start=today, end=date_utils.add(today, days=15), step=rd(days=1)):
+for date in date_utils.date_range(start=today, end=date_utils.add(today, days=15), step=relativedelta(days=1)):
     print(date)
 # 2019-03-29 01:53:48
 # 2019-03-30 01:53:48

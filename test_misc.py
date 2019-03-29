@@ -7,7 +7,8 @@ time_format = misc.DEFAULT_SERVER_TIME_FORMAT
 dt_format = misc.DEFAULT_SERVER_DATETIME_FORMAT
 # '%Y-%m-%d %H:%M:%S'
 
-flat_list = misc.flatten([[['a', 'b'], 'c'], 'd', [], ['e', [], 'f']])
+flat_list = misc.flatten(
+    [[['a', 'b'], 'c'], 'd', [], ['e', [], 'f']])
 # ['a', 'b', 'c', 'd', 'e', 'f']
 
 for num, el in misc.reverse_enumerate(['a', 'b', 'c', 'd']):
@@ -24,8 +25,7 @@ misc.topological_sort({'a': ['b', 'c'],
                        'y': ['z']
                        })
 # ['b', 'a', 'd', 'y', 'r']
-# упорядочивание вершин бесконтурного ориентированного графа согласно частичному порядку, заданному ребрами орграфа
-#  на множестве его вершин.
+
 
 misc.scan_languages()
 # [('sq_AL', 'Albanian / Shqip'),
@@ -62,5 +62,5 @@ misc.groupby([{'first_name': 'Maris', 'last_name': 'Riediger'},
 #             {'first_name': 'Zhenya', 'last_name': '2'},
 #             {'first_name': 'Zhenya', 'last_name': '3'}])])
 
-list(misc.unique(['maris', 'katya', 'zhenya', 'zhenya', 'zhenya']))
+print(set(misc.unique(['zhenya', 'katya', 'maris', 'zhenya', 'zhenya'])))
 # ['maris', 'katya', 'zhenya']

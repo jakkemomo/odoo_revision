@@ -12,8 +12,8 @@ session_path = config.session_dir
 parameters = config.options
 # {
 #     'addons_paths': '/...',
-#     'auto_reload': False,
-#     'db_host': 'db',
+#     'db_host': 'odoo',
+#     'db_filter': 'my_db',
 #
 #      ...
 # }
